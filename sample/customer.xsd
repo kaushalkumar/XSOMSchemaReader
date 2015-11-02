@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.example.com/customer" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cust="http://www.example.com/customer" xmlns:add="http://www.example.com/address" xmlns:phn="http://www.example.com/phone-number" elementFormDefault="qualified">
+  <xs:import namespace="http://www.example.com/address" schemaLocation="address.xsd"/>
+  <xs:import namespace="http://www.example.com/phone-number" schemaLocation="phone-number.xsd"/>
+  <xs:element name="customer" type="cust:Customer"></xs:element>
+  <xs:complexType name="Customer">
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element ref="add:address"/>
+        <xs:element ref="phn:phonenum" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:add="http://www.example.com/address" targetNamespace="http://www.example.com/address" elementFormDefault="qualified">
+  <xs:element name="address" type="add:Address"></xs:element>
+  <xs:complexType name="Address">
+      <xs:sequence>
+        <xs:element name="street" type="xs:string"/>
+        <xs:element name="street" type="xs:string"/>
+      </xs:sequence>
+  </xs:complexType>  
+</xs:schema>
